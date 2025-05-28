@@ -1,0 +1,8 @@
+com\example\recipe\model\RecipeMatchDTO.class
+com\example\recipe\service\RecipeService.class
+com\example\recipe\RecipeGeneratorApplication.class
+com\example\recipe\controller\RecipeController.class
+com\example\recipe\repository\RecipeRepository.class
+com\example\recipe\repository\RecipeRepository$1.class
+com\example\recipe\model\Recipe.class
+com\example\recipe\controller\RecipeRequest.class
