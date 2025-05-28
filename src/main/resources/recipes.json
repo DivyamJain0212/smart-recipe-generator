@@ -1,0 +1,403 @@
+[
+  {
+    "name": "Spaghetti Bolognese",
+    "ingredients": ["spaghetti", "ground beef", "tomato sauce", "onion", "garlic"],
+    "steps": ["Boil spaghetti", "Cook beef", "Mix sauce", "Combine and serve"],
+    "calories": 500,
+    "protein": 25,
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Vegan Lentil Soup",
+    "ingredients": ["lentils", "carrots", "celery", "onion", "vegetable broth"],
+    "steps": ["Chop veggies", "Cook lentils", "Simmer together", "Serve hot"],
+    "calories": 300,
+    "protein": 15,
+    "difficulty": "Easy",
+    "cookingTime": 40,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Vegetarian Stir Fry",
+    "ingredients": ["broccoli", "carrots", "bell pepper", "soy sauce", "tofu"],
+    "steps": ["Chop vegetables", "Stir fry tofu", "Add veggies", "Season with soy sauce"],
+    "calories": 350,
+    "protein": 20,
+    "difficulty": "Easy",
+    "cookingTime": 20,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Chicken Curry",
+    "ingredients": ["chicken", "curry powder", "coconut milk", "onion", "garlic"],
+    "steps": ["Cook chicken", "Add spices", "Simmer with coconut milk", "Serve with rice"],
+    "calories": 600,
+    "protein": 35,
+    "difficulty": "Medium",
+    "cookingTime": 45,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Gluten-Free Pancakes",
+    "ingredients": ["gluten-free flour", "milk", "egg", "baking powder", "honey"],
+    "steps": ["Mix ingredients", "Cook on skillet", "Serve with honey"],
+    "calories": 400,
+    "protein": 12,
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "dietary": "Gluten-Free"
+  },
+  {
+    "name": "Quinoa Salad",
+    "ingredients": ["quinoa", "cucumber", "tomato", "feta", "olive oil"],
+    "steps": ["Cook quinoa", "Chop veggies", "Mix together", "Drizzle with olive oil"],
+    "calories": 320,
+    "protein": 14,
+    "difficulty": "Easy",
+    "cookingTime": 25,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Beef Tacos",
+    "ingredients": ["taco shells", "ground beef", "lettuce", "cheddar", "salsa"],
+    "steps": ["Cook beef", "Assemble tacos", "Add toppings", "Serve"],
+    "calories": 450,
+    "protein": 28,
+    "difficulty": "Easy",
+    "cookingTime": 20,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Tofu Pad Thai",
+    "ingredients": ["rice noodles", "tofu", "peanuts", "bean sprouts", "pad thai sauce"],
+    "steps": ["Cook noodles", "Stir fry tofu", "Mix with noodles", "Add sauce and toppings"],
+    "calories": 550,
+    "protein": 22,
+    "difficulty": "Medium",
+    "cookingTime": 35,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Grilled Cheese Sandwich",
+    "ingredients": ["bread", "cheddar cheese", "butter"],
+    "steps": ["Butter bread", "Add cheese", "Grill until golden"],
+    "calories": 380,
+    "protein": 15,
+    "difficulty": "Easy",
+    "cookingTime": 10,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Shrimp Fried Rice",
+    "ingredients": ["rice", "shrimp", "peas", "carrots", "soy sauce"],
+    "steps": ["Cook rice", "Stir fry shrimp and veggies", "Mix with rice", "Season with soy sauce"],
+    "calories": 520,
+    "protein": 30,
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Chickpea Curry",
+    "ingredients": ["chickpeas", "coconut milk", "spinach", "curry powder", "onion"],
+    "steps": ["Cook onion and spices", "Add chickpeas and coconut milk", "Simmer", "Add spinach"],
+    "calories": 400,
+    "protein": 18,
+    "difficulty": "Easy",
+    "cookingTime": 30,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Egg Salad Sandwich",
+    "ingredients": ["eggs", "mayonnaise", "bread", "lettuce"],
+    "steps": ["Boil eggs", "Mix with mayo", "Assemble sandwich"],
+    "calories": 420,
+    "protein": 20,
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Beef Stroganoff",
+    "ingredients": ["beef", "mushrooms", "sour cream", "onion", "egg noodles"],
+    "steps": ["Cook beef and mushrooms", "Add sour cream", "Serve over noodles"],
+    "calories": 650,
+    "protein": 35,
+    "difficulty": "Medium",
+    "cookingTime": 40,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Vegan Buddha Bowl",
+    "ingredients": ["brown rice", "chickpeas", "avocado", "sweet potato", "tahini"],
+    "steps": ["Roast sweet potato", "Cook rice", "Assemble bowl", "Drizzle with tahini"],
+    "calories": 450,
+    "protein": 20,
+    "difficulty": "Medium",
+    "cookingTime": 35,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Grilled Chicken Salad",
+    "ingredients": ["chicken breast", "lettuce", "tomato", "cucumber", "vinaigrette"],
+    "steps": ["Grill chicken", "Prepare salad", "Top with chicken", "Drizzle vinaigrette"],
+    "calories": 380,
+    "protein": 30,
+    "difficulty": "Easy",
+    "cookingTime": 25,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Vegetable Soup",
+    "ingredients": ["carrots", "celery", "potatoes", "tomato", "vegetable broth"],
+    "steps": ["Chop veggies", "Cook in broth", "Simmer", "Serve hot"],
+    "calories": 250,
+    "protein": 10,
+    "difficulty": "Easy",
+    "cookingTime": 40,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Salmon Teriyaki",
+    "ingredients": ["salmon", "teriyaki sauce", "rice", "broccoli"],
+    "steps": ["Cook salmon with teriyaki", "Steam broccoli", "Serve with rice"],
+    "calories": 600,
+    "protein": 35,
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Mushroom Risotto",
+    "ingredients": ["arborio rice", "mushrooms", "parmesan", "onion", "vegetable broth"],
+    "steps": ["Cook mushrooms", "Slowly add broth to rice", "Stir in parmesan"],
+    "calories": 500,
+    "protein": 18,
+    "difficulty": "Hard",
+    "cookingTime": 50,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Turkey Burger",
+    "ingredients": ["ground turkey", "bun", "lettuce", "tomato", "cheddar"],
+    "steps": ["Form patties", "Grill", "Assemble burger"],
+    "calories": 550,
+    "protein": 30,
+    "difficulty": "Easy",
+    "cookingTime": 25,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Falafel Wrap",
+    "ingredients": ["falafel", "pita bread", "hummus", "lettuce", "tomato"],
+    "steps": ["Prepare falafel", "Assemble wrap", "Add hummus and veggies"],
+    "calories": 400,
+    "protein": 16,
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Pesto Pasta",
+    "ingredients": ["pasta", "basil", "parmesan", "pine nuts", "olive oil"],
+    "steps": ["Boil pasta", "Blend pesto", "Mix together", "Serve"],
+    "calories": 480,
+    "protein": 20,
+    "difficulty": "Easy",
+    "cookingTime": 25,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Stuffed Bell Peppers",
+    "ingredients": ["bell peppers", "ground beef", "rice", "tomato sauce", "cheddar"],
+    "steps": ["Prepare filling", "Stuff peppers", "Bake", "Serve"],
+    "calories": 550,
+    "protein": 30,
+    "difficulty": "Medium",
+    "cookingTime": 45,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Vegan Chili",
+    "ingredients": ["kidney beans", "black beans", "corn", "tomatoes", "chili powder"],
+    "steps": ["Cook beans", "Add spices and veggies", "Simmer", "Serve hot"],
+    "calories": 400,
+    "protein": 18,
+    "difficulty": "Medium",
+    "cookingTime": 50,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Shakshuka",
+    "ingredients": ["eggs", "tomatoes", "onion", "bell pepper", "paprika"],
+    "steps": ["Cook sauce", "Poach eggs", "Serve with bread"],
+    "calories": 370,
+    "protein": 20,
+    "difficulty": "Easy",
+    "cookingTime": 30,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Seafood Paella",
+    "ingredients": ["rice", "shrimp", "mussels", "saffron", "peas"],
+    "steps": ["Cook rice", "Add seafood", "Simmer with spices", "Serve"],
+    "calories": 650,
+    "protein": 35,
+    "difficulty": "Hard",
+    "cookingTime": 60,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Greek Salad",
+    "ingredients": ["cucumber", "tomato", "feta", "olives", "red onion"],
+    "steps": ["Chop veggies", "Mix with feta and olives", "Drizzle dressing"],
+    "calories": 300,
+    "protein": 12,
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Paneer Tikka",
+    "ingredients": ["paneer", "yogurt", "spices", "bell pepper", "onion"],
+    "steps": ["Marinate paneer", "Grill with veggies", "Serve with chutney"],
+    "calories": 450,
+    "protein": 25,
+    "difficulty": "Medium",
+    "cookingTime": 40,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Cauliflower Rice Bowl",
+    "ingredients": ["cauliflower rice", "avocado", "black beans", "corn", "salsa"],
+    "steps": ["Prepare cauliflower rice", "Assemble bowl", "Add toppings"],
+    "calories": 350,
+    "protein": 15,
+    "difficulty": "Easy",
+    "cookingTime": 20,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "BBQ Pulled Pork",
+    "ingredients": ["pork shoulder", "bbq sauce", "buns", "coleslaw"],
+    "steps": ["Slow cook pork", "Shred and mix with bbq", "Assemble sandwiches"],
+    "calories": 700,
+    "protein": 40,
+    "difficulty": "Hard",
+    "cookingTime": 300,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Miso Soup",
+    "ingredients": ["miso paste", "tofu", "seaweed", "green onions", "dashi"],
+    "steps": ["Prepare broth", "Add tofu and seaweed", "Simmer and serve"],
+    "calories": 150,
+    "protein": 10,
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Fish Tacos",
+    "ingredients": ["white fish", "tortillas", "cabbage", "lime", "sour cream"],
+    "steps": ["Cook fish", "Assemble tacos", "Add toppings"],
+    "calories": 500,
+    "protein": 30,
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Peanut Butter Banana Smoothie",
+    "ingredients": ["banana", "peanut butter", "almond milk", "honey"],
+    "steps": ["Blend all ingredients", "Serve chilled"],
+    "calories": 300,
+    "protein": 12,
+    "difficulty": "Easy",
+    "cookingTime": 5,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "ingredients": ["eggplant", "tomato sauce", "mozzarella", "parmesan", "breadcrumbs"],
+    "steps": ["Bread and bake eggplant", "Layer with sauce and cheese", "Bake again"],
+    "calories": 600,
+    "protein": 25,
+    "difficulty": "Medium",
+    "cookingTime": 50,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Sushi Rolls",
+    "ingredients": ["sushi rice", "nori", "cucumber", "avocado", "crab sticks"],
+    "steps": ["Prepare rice", "Assemble rolls", "Slice and serve"],
+    "calories": 450,
+    "protein": 22,
+    "difficulty": "Hard",
+    "cookingTime": 60,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Vegan Pancakes",
+    "ingredients": ["flour", "almond milk", "baking powder", "maple syrup"],
+    "steps": ["Mix batter", "Cook on skillet", "Serve with syrup"],
+    "calories": 350,
+    "protein": 8,
+    "difficulty": "Easy",
+    "cookingTime": 15,
+    "dietary": "Vegan"
+  },
+  {
+    "name": "Chicken Caesar Salad",
+    "ingredients": ["chicken breast", "romaine", "parmesan", "croutons", "caesar dressing"],
+    "steps": ["Grill chicken", "Prepare salad", "Top with chicken and dressing"],
+    "calories": 420,
+    "protein": 30,
+    "difficulty": "Easy",
+    "cookingTime": 25,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Beef Burrito",
+    "ingredients": ["tortilla", "ground beef", "beans", "rice", "cheddar"],
+    "steps": ["Cook beef", "Assemble burrito", "Wrap and serve"],
+    "calories": 650,
+    "protein": 35,
+    "difficulty": "Medium",
+    "cookingTime": 35,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Zucchini Noodles",
+    "ingredients": ["zucchini", "pesto", "parmesan", "cherry tomatoes"],
+    "steps": ["Spiralize zucchini", "Sauté lightly", "Toss with pesto and tomatoes"],
+    "calories": 300,
+    "protein": 12,
+    "difficulty": "Easy",
+    "cookingTime": 20,
+    "dietary": "Vegetarian"
+  },
+  {
+    "name": "Shepherd's Pie",
+    "ingredients": ["ground lamb", "mashed potatoes", "peas", "carrots", "onion"],
+    "steps": ["Cook filling", "Top with mashed potatoes", "Bake"],
+    "calories": 700,
+    "protein": 35,
+    "difficulty": "Hard",
+    "cookingTime": 60,
+    "dietary": "Non-Vegetarian"
+  },
+  {
+    "name": "Vegan Mac and Cheese",
+    "ingredients": ["pasta", "cashews", "nutritional yeast", "garlic", "plant milk"],
+    "steps": ["Blend sauce", "Cook pasta", "Mix and serve"],
+    "calories": 450,
+    "protein": 15,
+    "difficulty": "Medium",
+    "cookingTime": 30,
+    "dietary": "Vegan"
+  }
+]
+
