@@ -155,23 +155,6 @@ mvn verify
 
 ---
 
-## 📝 Configuration
-
-### Application Properties
-```properties
-# Server Configuration
-server.port=8080
-
-# Database Configuration
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.h2.console.enabled=true
-
-# Google Cloud Vision
-google.cloud.vision.credentials.path=./credentials.json
-```
-
----
-
 ## 🤝 Contributing
 
 We welcome contributions! Please follow these steps:
@@ -190,18 +173,13 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🌟 Acknowledgments
 
-- Built with ❤️ using **Spring Boot** and **Google Cloud** tools
-- Bootstrap team for the responsive UI components
-- Google Cloud Vision API for intelligent image processing
-- Open source community for inspiration and support
+- Built with ❤️ using **Spring Boot** and **Google Cloud** tools  
+- **Bootstrap** team for the responsive UI components  
+- **ChatGPT by OpenAI** for assistance with ideation, coding, and documentation  
+- The **open-source community** for constant inspiration and support  
+
 
 ---
 
@@ -211,18 +189,20 @@ If you encounter any issues or have questions:
 
 1. Check the [Issues](https://github.com/yourusername/smart-recipe-generator/issues) page
 2. Create a new issue if your problem isn't already reported
-3. Contact the maintainers at [your-email@example.com]
+3. Contact the maintainers at divyamjain2contact@gmail.com
 
 ---
 
 ## 🔮 Future Enhancements
 
+- [ ] Image-based ingredient recognition using computer vision
 - [ ] Advanced ingredient substitution suggestions
 - [ ] Nutritional information integration
 - [ ] Shopping list generation
 - [ ] Social recipe sharing
 - [ ] Mobile app development
 - [ ] Multi-language support
+
 
 ---
 
