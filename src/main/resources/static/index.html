@@ -7,150 +7,150 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="gradient-header text-center p-4 mb-4">
-        <h1 class="display-5 fw-bold">🍽 Smart Recipe Generator</h1>
-        <p class="lead">Enter your available ingredients and preferences to find delicious recipes instantly!</p>
-    </div>
+<div class="gradient-header text-center p-4 mb-4">
+    <h1 class="display-5 fw-bold">🍽️ Smart Recipe Generator</h1>
+    <p class="lead">Enter your available ingredients and preferences to find delicious recipes instantly!</p>
+</div>
 
-    <div class="container mb-5">
-        <div class="card shadow p-4">
-            <!-- Ingredients input -->
-            <div class="mb-3">
-                <label for="ingredients" class="form-label">🥗 Available Ingredients (comma-separated):</label>
-                <input type="text" class="form-control" id="ingredients" placeholder="e.g., tomato, pasta, cheese">
-            </div>
-
-            <!-- Dietary preference and difficulty -->
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="dietary" class="form-label">🥦 Dietary Preference:</label>
-                    <select class="form-select" id="dietary">
-                        <option value="Any">Any</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="Vegan">Vegan</option>
-                        <option value="Non-Vegetarian">Non-Vegetarian</option>
-                        <option value="Gluten-Free">Gluten-Free</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="difficulty" class="form-label">🎯 Difficulty:</label>
-                    <select class="form-select" id="difficulty">
-                        <option value="Any">Any</option>
-                        <option value="Easy">Easy</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Hard">Hard</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Max cooking time -->
-            <div class="mb-3">
-                <label for="maxCookingTime" class="form-label">⏱ Maximum Cooking Time (minutes):</label>
-                <input type="number" class="form-control" id="maxCookingTime" placeholder="e.g., 30">
-            </div>
-
-            <!-- Buttons -->
-            <div class="mb-3 d-flex justify-content-between">
-                <button class="btn btn-primary" id="submitBtn">🔍 Find Recipes</button>
-                <button class="btn btn-outline-success" id="favoritesToggle">⭐ Show Only Favorites</button>
-            </div>
-
-            <hr>
-
-            <!-- Image upload -->
-            <div class="mb-3">
-                <label for="imageUpload" class="form-label">📸 Upload Ingredient Image:</label>
-                <input type="file" class="form-control" id="imageUpload">
-            </div>
-            <div class="mb-3">
-                <button class="btn btn-secondary" id="uploadBtn">🧠 Detect Ingredients</button>
-            </div>
-
-            <!-- Message display -->
-            <div id="message" class="my-3"></div>
+<div class="container mb-5">
+    <div class="card shadow p-4">
+        <!-- Ingredients input -->
+        <div class="mb-3">
+            <label for="ingredients" class="form-label">🥗 Available Ingredients (comma-separated):</label>
+            <input type="text" class="form-control" id="ingredients" placeholder="e.g., tomato, pasta, cheese">
         </div>
 
-        <!-- Recipes container -->
-        <div class="row mt-4" id="recipesContainer"></div>
+        <!-- Dietary preference and difficulty -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="dietary" class="form-label">🥦 Dietary Preference:</label>
+                <select class="form-select" id="dietary">
+                    <option value="Any">Any</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    <option value="Gluten-Free">Gluten-Free</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="difficulty" class="form-label">🎯 Difficulty:</label>
+                <select class="form-select" id="difficulty">
+                    <option value="Any">Any</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Max cooking time -->
+        <div class="mb-3">
+            <label for="maxCookingTime" class="form-label">⏱️ Maximum Cooking Time (minutes):</label>
+            <input type="number" class="form-control" id="maxCookingTime" placeholder="e.g., 30">
+        </div>
+
+        <!-- Buttons -->
+        <div class="mb-3 d-flex justify-content-between">
+            <button class="btn btn-primary" id="submitBtn">🔍 Find Recipes</button>
+            <button class="btn btn-outline-success" id="favoritesToggle">⭐ Show Only Favorites</button>
+        </div>
+
+        <hr>
+
+        <!-- Image upload -->
+        <div class="mb-3">
+            <label for="imageUpload" class="form-label">📸 Upload Ingredient Image:</label>
+            <input type="file" class="form-control" id="imageUpload">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-secondary" id="uploadBtn">🧠 Detect Ingredients</button>
+        </div>
+
+        <!-- Message display -->
+        <div id="message" class="my-3"></div>
     </div>
 
-    <script>
-        let allRecipes = [];
-        let showOnlyFavorites = false;
+    <!-- Recipes container -->
+    <div class="row mt-4" id="recipesContainer"></div>
+</div>
 
-        function isNumericOnly(str) {
-            return /^[0-9\s,]+$/.test(str);
+<script>
+    let allRecipes = [];
+    let showOnlyFavorites = false;
+
+    function isNumericOnly(str) {
+        return /^[0-9\s,]+$/.test(str);
+    }
+
+    async function fetchRecipes() {
+        const ingredientsInput = document.getElementById('ingredients').value.trim();
+        const dietary = document.getElementById('dietary').value;
+        const difficulty = document.getElementById('difficulty').value;
+        const maxCookingTimeInput = document.getElementById('maxCookingTime').value.trim();
+
+        if (ingredientsInput && isNumericOnly(ingredientsInput)) {
+            alert("Ingredients must include at least one non-numeric word.");
+            return;
         }
 
-        async function fetchRecipes() {
-            const ingredientsInput = document.getElementById('ingredients').value.trim();
-            const dietary = document.getElementById('dietary').value;
-            const difficulty = document.getElementById('difficulty').value;
-            const maxCookingTimeInput = document.getElementById('maxCookingTime').value.trim();
-
-            if (ingredientsInput && isNumericOnly(ingredientsInput)) {
-                alert("Ingredients must include at least one non-numeric word.");
-                return;
-            }
-
-            if (maxCookingTimeInput && isNaN(maxCookingTimeInput)) {
-                alert("Maximum cooking time must be a valid number.");
-                return;
-            }
-
-            const ingredients = ingredientsInput ? ingredientsInput.split(',').map(s => s.trim().toLowerCase()) : [];
-            const maxCookingTime = maxCookingTimeInput ? parseInt(maxCookingTimeInput) : null;
-
-            document.getElementById('message').innerHTML = '<div>Loading recipes...</div>';
-            document.getElementById('recipesContainer').innerHTML = '';
-
-            try {
-                const response = await fetch('/api/recipes', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        availableIngredients: ingredients,
-                        dietary,
-                        difficulty,
-                        maxCookingTime
-                    })
-                });
-
-                const recipes = await response.json();
-                document.getElementById('message').innerHTML = '';
-
-                if (recipes.length === 0) {
-                    document.getElementById('message').innerHTML = '<div>No matching recipes found.</div>';
-                    alert('No matching recipes found. Please try different ingredients or filters.');
-                    return;
-                }
-
-                allRecipes = recipes;
-                renderRecipes();
-            } catch (err) {
-                console.error(err);
-                document.getElementById('message').innerHTML = '<div class="text-danger">Error fetching recipes.</div>';
-            }
+        if (maxCookingTimeInput && isNaN(maxCookingTimeInput)) {
+            alert("Maximum cooking time must be a valid number.");
+            return;
         }
 
-        function renderRecipes() {
-            const container = document.getElementById('recipesContainer');
-            container.innerHTML = '';
+        const ingredients = ingredientsInput ? ingredientsInput.split(',').map(s => s.trim().toLowerCase()) : [];
+        const maxCookingTime = maxCookingTimeInput ? parseInt(maxCookingTimeInput) : null;
 
-            const filteredRecipes = showOnlyFavorites
-                ? allRecipes.filter(r => r.favorite)
-                : allRecipes;
+        document.getElementById('message').innerHTML = '<div>Loading recipes...</div>';
+        document.getElementById('recipesContainer').innerHTML = '';
 
-            if (showOnlyFavorites && filteredRecipes.length === 0) {
-                document.getElementById('message').innerHTML = '<div class="text-warning">No favorite recipes found.</div>';
-                alert('No favorite recipes found. Please add some recipes to favorites first.');
+        try {
+            const response = await fetch('/api/recipes', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    availableIngredients: ingredients,
+                    dietary,
+                    difficulty,
+                    maxCookingTime
+                })
+            });
+
+            const recipes = await response.json();
+            document.getElementById('message').innerHTML = '';
+
+            if (recipes.length === 0) {
+                document.getElementById('message').innerHTML = '<div>No matching recipes found.</div>';
+                alert('No matching recipes found. Please try different ingredients or filters.');
                 return;
             }
 
-            filteredRecipes.forEach(recipe => {
-                const card = document.createElement('div');
-                card.className = 'col-md-6 mb-3';
-                card.innerHTML = `
+            allRecipes = recipes;
+            renderRecipes();
+        } catch (err) {
+            console.error(err);
+            document.getElementById('message').innerHTML = '<div class="text-danger">Error fetching recipes.</div>';
+        }
+    }
+
+    function renderRecipes() {
+        const container = document.getElementById('recipesContainer');
+        container.innerHTML = '';
+
+        const filteredRecipes = showOnlyFavorites
+            ? allRecipes.filter(r => r.favorite)
+            : allRecipes;
+
+        if (showOnlyFavorites && filteredRecipes.length === 0) {
+            document.getElementById('message').innerHTML = '<div class="text-warning">No favorite recipes found.</div>';
+            alert('No favorite recipes found. Please add some recipes to favorites first.');
+            return;
+        }
+
+        filteredRecipes.forEach(recipe => {
+            const card = document.createElement('div');
+            card.className = 'col-md-6 mb-3';
+            card.innerHTML = `
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h5>${recipe.name}</h5>
@@ -177,48 +177,48 @@
                             </button>
                         </div>
                     </div>`;
-                container.appendChild(card);
+            container.appendChild(card);
+        });
+    }
+
+    async function rateRecipe(recipeName) {
+        const ratingSelect = document.getElementById(`ratingSelect-${recipeName}`);
+        const rating = ratingSelect.value;
+
+        try {
+            await fetch(`/api/recipes/${encodeURIComponent(recipeName)}/rate?rating=${rating}`, {
+                method: 'POST'
             });
+            alert(`Thank you for rating "${recipeName}" with ${rating} stars!`);
+            fetchRecipes();
+        } catch (err) {
+            console.error(err);
+            alert('Error submitting rating.');
         }
+    }
 
-        async function rateRecipe(recipeName) {
-            const ratingSelect = document.getElementById(ratingSelect-${recipeName});
-            const rating = ratingSelect.value;
-
-            try {
-                await fetch(/api/recipes/${encodeURIComponent(recipeName)}/rate?rating=${rating}, {
-                    method: 'POST'
-                });
-                alert(Thank you for rating "${recipeName}" with ${rating} stars!);
-                fetchRecipes();
-            } catch (err) {
-                console.error(err);
-                alert('Error submitting rating.');
-            }
+    async function toggleFavorite(recipeName) {
+        try {
+            await fetch(`/api/recipes/${encodeURIComponent(recipeName)}/favorite`, {
+                method: 'POST'
+            });
+            fetchRecipes();
+        } catch (err) {
+            console.error(err);
+            alert('Error toggling favorite.');
         }
+    }
 
-        async function toggleFavorite(recipeName) {
-            try {
-                await fetch(/api/recipes/${encodeURIComponent(recipeName)}/favorite, {
-                    method: 'POST'
-                });
-                fetchRecipes();
-            } catch (err) {
-                console.error(err);
-                alert('Error toggling favorite.');
-            }
-        }
+    document.getElementById('submitBtn').addEventListener('click', fetchRecipes);
+    document.getElementById('favoritesToggle').addEventListener('click', () => {
+        showOnlyFavorites = !showOnlyFavorites;
+        document.getElementById('favoritesToggle').textContent = showOnlyFavorites ? '🔄 Show All Recipes' : '⭐ Show Only Favorites';
+        renderRecipes();
+    });
 
-        document.getElementById('submitBtn').addEventListener('click', fetchRecipes);
-        document.getElementById('favoritesToggle').addEventListener('click', () => {
-            showOnlyFavorites = !showOnlyFavorites;
-            document.getElementById('favoritesToggle').textContent = showOnlyFavorites ? '🔄 Show All Recipes' : '⭐ Show Only Favorites';
-            renderRecipes();
-        });
-
-        document.getElementById('uploadBtn').addEventListener('click', () => {
-            alert('Feature not yet available.');
-        });
-    </script>
+    document.getElementById('uploadBtn').addEventListener('click', () => {
+        alert('Feature not yet available.');
+    });
+</script>
 </body>
 </html>
