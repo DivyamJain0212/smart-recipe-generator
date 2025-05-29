@@ -1,6 +1,6 @@
 # 🍽️ Smart Recipe Generator
 
-A **Spring Boot** application that helps users generate recipe suggestions based on available ingredients, dietary preferences, and difficulty levels. Features a clean web interface and integrates with Google Cloud Vision API for intelligent ingredient detection from images.
+A **Spring Boot** application that helps users generate recipe suggestions based on available ingredients, dietary preferences, and difficulty levels. Features a clean web interface with planned integration of Google Cloud Vision API for intelligent ingredient detection from images.
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green)
@@ -80,10 +80,16 @@ mvn spring-boot:run
 ```
 
 ### 5. Access the Web Interface
+
 Open your browser and navigate to: **http://localhost:8080**
 
----
+Or try the live deployed version here: **https://smart-recipe-generator-sbe8.onrender.com/**
 
+---
+## 📷 Screenshot
+![image](https://github.com/user-attachments/assets/42f86fd1-83f6-496d-ac8b-dc3faa1aee43)
+
+---
 ## 🐳 Docker Deployment
 
 ### Build Docker Image
